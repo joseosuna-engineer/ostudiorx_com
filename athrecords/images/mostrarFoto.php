@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('mostrar errores:', 1); 
 
 /* Algunas variables */ 
-$DBhost = "localhost"; 
+$DBhost = "127.10.13.129"; 
 $DBuser = "deportes"; 
 $DBpass = "deportes"; 
 $DBName = "bd_registro"; 

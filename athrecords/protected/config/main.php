@@ -62,7 +62,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=bd_registro',
+			'connectionString' => 'mysql:host=127.10.13.129;dbname=bd_registro',
 			'emulatePrepare' => true,
 			'username' => 'deportes',
 			'password' => 'deportes',

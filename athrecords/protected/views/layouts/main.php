@@ -47,48 +47,13 @@
 	<?php endif?>
 	
 	<script type="text/javascript">
-var conectado;
-$(document).ready(function() {	
-	conectado = true;
-	checkConnection();
-});
+
 function liftOff() { 
     $('#error-conect').countdown('destroy'); 
 	$('#error-conect').text('0'); 
 } 
 
-function checkConnection() {
-	$('#error-conect').countdown({onExpiry: liftOff, until: 9, compact: true, format: 'S'});
-	
-    $.ajax({
-        type:"post",
-        url:"http://localhost:8080",
-        error:function(XMLHttpRequest, textStatus, errorThrown) { 
-            
-			if(conectado==true){
-				$.blockUI({ message: '<div style="font: arial 14px; font-weight:normal; line-height:16px; "><b>Sin conexi&oacute;n</b> Falta(n) <span id="error-conect">10</span> s para conectarse. (001)</div>', css: { backgroundColor: '#F9EDBE', borderColor: '#F9EDBE' } });
-				
-				conectado = false;
-			}
-			
-        },
-		success: function()
-        {
-            if(conectado==false){
-				$.unblockUI();
-				conectado = true;
-			}
-			
-			
-             
-        },
-               
-    });
-    
-    setTimeout(function() {
-        checkConnection();
-    }, 2000);
-}
+
 	
 </script>
 
