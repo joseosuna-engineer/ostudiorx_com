@@ -37,7 +37,7 @@
 $this->pageTitle=Yii::app()->name . ' - Acceso';
 ?>
 <div id="cabecera">
-<img alt="Dirección de Deportes" src="<?php echo Yii::app()->request->baseUrl; ?>/css/logo_deportes.png">
+<img alt="Dirección de Deportes" src="http://rstatic.ostudiorx.com/full-logo.png">
 <h1>Acceso</h1>
 
 </div>

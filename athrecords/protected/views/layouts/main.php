@@ -60,7 +60,7 @@ function liftOff() {
 	<?php echo $content; ?>
 
 	<div id="footer">
-		Derechos de Autor &copy; <?php echo date('Y'); ?> UTI - UCV.<br/>
+		Derechos de Autor &copy; <?php echo date('Y'); ?>  Producciones OSTUDIO rx C.A.<br/>
 		Todos los derechos reservados.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->

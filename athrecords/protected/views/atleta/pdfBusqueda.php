@@ -143,17 +143,17 @@ $header="<div id='encabezado'>
 			
 				<div id='membrete'>
 				
-					<p class='membrete'>UNIVERSIDAD CENTRAL DE VENEZUELA</p>
-					<p class='membrete'>DIRECCIÓN DE DEPORTES</p>
-					<p class='membrete'>CARACAS</p>
+					<p class='membrete'>NOMBRE INSTITUCIÓN</p>
+					<p class='membrete'>NOMBRE DEPARTAMENTO</p>
+					<p class='membrete'>CIUDAD</p>
 					
-					<p id='titulo'>REPORTE ATLETAS CLUB UCV</p>
+					<p id='titulo'>REPORTE ATLETAS</p>
 				
 				</div>
 				
 				<div id='foto'>
 				
-					<img src='./images/logo_ucv.png'   />
+					<img src='http://rstatic.ostudiorx.com/full-logo.png'   />
 				
 				</div>
 			
@@ -166,9 +166,9 @@ $header="<div id='encabezado'>
 ";
 $footer="<div id='pie'>
 		
-					<p class='pie'>Derechos de Autor © ".$year." UTI - UCV.</p>
+					<p class='pie'>Derechos de Autor © ".$year."  Producciones OSTUDIO rx C.A.</p>
 					<p class='pie'>Todos los derechos reservados.</p>
-					<p class='pie'>Dirección de Deportes</p>
+					
 
 		</div> <div style='text-align:right;'>{PAGENO}/{nb}</div>";
 		

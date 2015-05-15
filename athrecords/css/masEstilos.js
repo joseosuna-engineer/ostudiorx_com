@@ -22,6 +22,7 @@
 		 $("#content").css("margin", "0 auto");
 		 $("#cabecera").css("height", "auto");
 		 $("#cabecera").css("margin", "0 0 27px");
+                 $("#cabecera img").css("width", "220px");
 		 $("#cabecera img").css("display", "block");
 		 $("#cabecera img").css("margin", "0 auto");
 		 $("#cabecera h1").css("text-align", "center");
