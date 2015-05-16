@@ -5,9 +5,18 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT')); 
+define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
+ 
+$CONNECTION_STRING = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
+      
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Registro de Atletas Club UCV',
+	'name'=>'Registro de Atletas Ostudiorx',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -62,10 +71,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=127.10.13.129;dbname=bd_registro',
+			'connectionString' => $CONNECTION_STRING,
 			'emulatePrepare' => true,
-			'username' => 'deportes',
-			'password' => 'deportes',
+			'username' => DB_USER,
+			'password' => DB_PASS,
 			'charset' => 'utf8',
 		),
 		

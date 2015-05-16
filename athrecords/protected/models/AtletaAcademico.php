@@ -99,7 +99,7 @@ class AtletaAcademico extends CActiveRecord
 			'semestre_year_cursa_atleta' => 'Semestre o año que cursa',
 			'estatus_actual_atleta' => 'Estatus actual',		
 			
-			'year_ingreso_ucv_atleta' => 'Año de ingreso a la UCV',
+			'year_ingreso_ucv_atleta' => 'Año de ingreso a la U',
 			'tipo_ingreso_ucv_atleta' => 'Tipo de ingreso',
 			'cambio_escuela_atleta' => '¿Ha realizado cambio de escuela?',
 			'facultad_anterior_atleta' => 'Facultad anterior',

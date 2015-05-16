@@ -704,9 +704,9 @@ $header="	<div id='encabezado'>
 
 $footer="<div id='pie'>
 		
-					<p class='pie'>Derechos de Autor © ".$year." UTI - UCV.</p>
+					<p class='pie'>Derechos de Autor © ".$year." Producciones OSTUDIO rx C.A.</p>
 					<p class='pie'>Todos los derechos reservados.</p>
-					<p class='pie'>Dirección de Deportes</p>
+					
 
 		</div> <div style='text-align:right;'>{PAGENO}/{nb}</div>";
 

@@ -5,7 +5,7 @@
 .grid-view table.items td {
 	text-align:center;
 
-{
+}
 
 </style>
 <?php
