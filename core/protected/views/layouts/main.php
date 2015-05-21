@@ -3,6 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="es" />
+        
+        <!-- for apple gadgets viewport and mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />         
+        
+        <!-- icons -->
+        <link rel="shortcut icon" href="http://rstatic.ostudiorx.com/logo.gif" type="image/x-icon" />
+        <link rel="icon" href="http://rstatic.ostudiorx.com/logo.gif" type="image/x-icon" />
 
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />

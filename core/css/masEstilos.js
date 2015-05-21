@@ -21,10 +21,7 @@
 		 $("#content").css("-moz-box-shadow", "0 3px 6px rgba(0, 0, 0, 0.15)");
 		 $("#content").css("margin", "0 auto");
 		 $("#cabecera").css("height", "auto");
-		 $("#cabecera").css("margin", "0 0 27px");
-                 $("#cabecera img").css("width", "220px");
-		 $("#cabecera img").css("display", "block");
-		 $("#cabecera img").css("margin", "0 auto");
+		 $("#cabecera").css("margin", "0 0 27px");            
 		 $("#cabecera h1").css("text-align", "center");
 		 $("#cabecera h1").css("margin", "0px");
 		 $("div.form").css("width","280px");

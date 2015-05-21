@@ -75,7 +75,7 @@ abstract class CApplication extends CModule
 	/**
 	 * @var string the application name. Defaults to 'My Application'.
 	 */
-	public $name='My Application';
+	public $name='Chacao';
 	/**
 	 * @var string the charset currently used for the application. Defaults to 'UTF-8'.
 	 */

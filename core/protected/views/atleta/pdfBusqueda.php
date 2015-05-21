@@ -1,5 +1,5 @@
 ﻿<?php
-$pdf = Yii::createComponent('application.extensions.MPDF53.mpdf');
+$pdf = Yii::createComponent('application.extensions.mpdf60.mpdf');
 $dataProvider = Yii::app()->session['datos_filtrados']->getData();
 $contador=count($dataProvider);
 date_default_timezone_set("America/Caracas");
@@ -135,7 +135,7 @@ $header="<div id='encabezado'>
 		
 			<div id='logo'>
 			
-				<img src='./images/logo_deportes.png'   />
+				<img src='http://rstatic.ostudiorx.com/logo.png'   />
 			
 			</div>
 			
@@ -144,7 +144,7 @@ $header="<div id='encabezado'>
 				<div id='membrete'>
 				
 					<p class='membrete'>NOMBRE INSTITUCIÓN</p>
-					<p class='membrete'>NOMBRE DEPARTAMENTO</p>
+					<p class='membrete'>NOMBRE UNIDAD</p>
 					<p class='membrete'>CIUDAD</p>
 					
 					<p id='titulo'>REPORTE ATLETAS</p>

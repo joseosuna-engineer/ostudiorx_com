@@ -37,9 +37,11 @@
 $this->pageTitle=Yii::app()->name . ' - Acceso';
 ?>
 <div id="cabecera">
-<img alt="Dirección de Deportes" src="http://rstatic.ostudiorx.com/full-logo.png">
-<h1>Acceso</h1>
-
+    <div style="text-align: right;">
+        <img src="http://rstatic.ostudiorx.com/logo.gif" alt="Logo" style="width: 15px; margin:0 auto;">
+        <span style="font-size: 12px;">CHACAO</span>
+    </div>
+    <h1>Acceso</h1>
 </div>
 
 <div class="form">

@@ -20,7 +20,7 @@ $foto = "./images/_foto".$model->cedula_atleta.".jpg";
 								imagejpeg($image, $foto, 100);
 
 
-$pdf = Yii::createComponent('application.extensions.MPDF53.mpdf');
+$pdf = Yii::createComponent('application.extensions.mpdf60.mpdf');
 
 $fecha = empty($model->fecha_nacimiento_atleta) ? '': Yii::app()->dateFormatter->format("dd-MM-yyyy", $model->fecha_nacimiento_atleta);
 
@@ -673,7 +673,7 @@ $header="	<div id='encabezado'>
 		
 			<div id='logo'>
 			
-				<img src='./images/logo_deportes.png'   />
+				<img src='http://rstatic.ostudiorx.com/logo.png'   />
 			
 			</div>
 			
@@ -681,9 +681,9 @@ $header="	<div id='encabezado'>
 			
 				<div id='membrete'>
 				
-					<p class='membrete'>UNIVERSIDAD CENTRAL DE VENEZUELA</p>
-					<p class='membrete'>DIRECCIÓN DE DEPORTES</p>
-					<p class='membrete'>CARACAS</p>
+					<p class='membrete'>NOMBRE INSTITUCIÓN</p>
+					<p class='membrete'>NOMBRE UNIDAD</p>
+					<p class='membrete'>CIUDAD</p>
 					
 					<p id='titulo'>FICHA TÉCNICA DEL ATLETA</p>
 				

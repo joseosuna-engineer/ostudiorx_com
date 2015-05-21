@@ -11,12 +11,15 @@ define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT'));
 define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
 define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
 define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
+define('GII_MODULE_PASS',getenv('GII_MODULE_PASS'));
+define('GII_MODULE_IP',getenv('GII_MODULE_IP'));
+define('ADMIN_EMAIL',getenv('ADMIN_EMAIL'));
  
 $CONNECTION_STRING = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
       
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Registro de Atletas Ostudiorx',
+	'name'=>'Chacao',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -32,9 +35,9 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'1234clave.',
+			'password'=>GII_MODULE_PASS,
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>array(GII_MODULE_IP,'::1'),
 		),
 		
 	),
@@ -103,6 +106,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>ADMIN_EMAIL,
 	),
 );
