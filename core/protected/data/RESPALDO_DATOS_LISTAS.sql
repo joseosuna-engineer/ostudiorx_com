@@ -1,4 +1,5 @@
 CREATE DATABASE  IF NOT EXISTS `bd_registro` /*!40100 DEFAULT CHARACTER SET latin1 */;
+DELIMITER ;
 USE `bd_registro`;
 -- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
 --
@@ -16,6 +17,55 @@ USE `bd_registro`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Store Procedures to fill tables
+--
+
+DROP PROCEDURE IF EXISTS fill_tbl_year;
+
+DROP PROCEDURE IF EXISTS fill_tbl_periodo_lectivo;
+
+--
+-- Dumping data for table `tbl_year`
+--
+
+DELIMITER $$
+CREATE PROCEDURE fill_tbl_year()
+BEGIN
+  DECLARE max_year INT DEFAULT YEAR(CURDATE());
+  DECLARE min_year INT DEFAULT (max_year - 100);
+delete from `tbl_year`;
+INSERT INTO `tbl_year` VALUES (0,'N/A');
+
+  WHILE min_year <= max_year  DO
+    INSERT INTO `tbl_year` VALUES (min_year,CAST(min_year AS CHAR));
+    SET min_year = min_year + 1;
+  END WHILE;
+END$$
+DELIMITER ;
+
+--
+-- Dumping data for table `tbl_periodo_lectivo`
+--
+
+DELIMITER $$
+CREATE PROCEDURE fill_tbl_periodo_lectivo()
+BEGIN
+  DECLARE max_year INT DEFAULT YEAR(CURDATE());
+  DECLARE min_year INT DEFAULT 1970;
+  DECLARE year_count INT DEFAULT 1;
+delete from `tbl_periodo_lectivo`;
+
+  WHILE min_year <= max_year  DO
+    INSERT INTO `tbl_periodo_lectivo` VALUES (year_count,CONCAT('1-',CAST(min_year AS CHAR)));
+    SET year_count = year_count + 1;
+	INSERT INTO `tbl_periodo_lectivo` VALUES (year_count,CONCAT('2-',CAST(min_year AS CHAR)));
+    SET year_count = year_count + 1;    
+    SET min_year = min_year + 1;
+  END WHILE;
+END$$
+DELIMITER ;
 
 --
 -- Table structure for table `tbl_nacionalidad_atleta`
@@ -133,7 +183,9 @@ CREATE TABLE `tbl_periodo_lectivo` (
 
 LOCK TABLES `tbl_periodo_lectivo` WRITE;
 /*!40000 ALTER TABLE `tbl_periodo_lectivo` DISABLE KEYS */;
-INSERT INTO `tbl_periodo_lectivo` VALUES (1,'1-1970'),(2,'2-1970'),(3,'1-1971'),(4,'2-1971'),(5,'1-1972'),(6,'2-1972'),(7,'1-1973'),(8,'2-1973'),(9,'1-1974'),(10,'2-1974'),(11,'1-1975'),(12,'2-1975'),(13,'1-1976'),(14,'2-1976'),(15,'1-1977'),(16,'2-1977'),(17,'1-1978'),(18,'2-1978'),(19,'1-1979'),(20,'2-1979'),(21,'1-1980'),(22,'2-1980'),(23,'1-1981'),(24,'2-1981'),(25,'1-1982'),(26,'2-1982'),(27,'1-1983'),(28,'2-1983'),(29,'1-1984'),(30,'2-1984'),(31,'1-1985'),(32,'2-1985'),(33,'1-1986'),(34,'2-1986'),(35,'1-1987'),(36,'2-1987'),(37,'1-1988'),(38,'2-1988'),(39,'1-1989'),(40,'2-1989'),(41,'1-1990'),(42,'2-1990'),(43,'1-1991'),(44,'2-1991'),(45,'1-1992'),(46,'2-1992'),(47,'1-1993'),(48,'2-1993'),(49,'1-1994'),(50,'2-1994'),(51,'1-1995'),(52,'2-1995'),(53,'1-1996'),(54,'2-1996'),(55,'1-1997'),(56,'2-1997'),(57,'1-1998'),(58,'2-1998'),(59,'1-1999'),(60,'2-1999'),(61,'1-2000'),(62,'2-2000'),(63,'1-2001'),(64,'2-2001'),(65,'1-2002'),(66,'2-2002'),(67,'1-2003'),(68,'2-2003'),(69,'1-2004'),(70,'2-2004'),(71,'1-2005'),(72,'2-2005'),(73,'1-2006'),(74,'2-2006'),(75,'1-2007'),(76,'2-2007'),(77,'1-2008'),(78,'2-2008'),(79,'1-2009'),(80,'2-2009'),(81,'1-2010'),(82,'2-2010'),(83,'1-2011'),(84,'2-2011'),(85,'1-2012'),(86,'2-2012');
+/*!40101 SET sql_safe_updates=0 */;
+call fill_tbl_periodo_lectivo();
+/*!40101 SET sql_safe_updates=1 */;
 /*!40000 ALTER TABLE `tbl_periodo_lectivo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -356,7 +408,9 @@ CREATE TABLE `tbl_year` (
 
 LOCK TABLES `tbl_year` WRITE;
 /*!40000 ALTER TABLE `tbl_year` DISABLE KEYS */;
-INSERT INTO `tbl_year` VALUES (0,'N/A'),(1912,'1912'),(1913,'1913'),(1914,'1914'),(1915,'1915'),(1916,'1916'),(1917,'1917'),(1918,'1918'),(1919,'1919'),(1920,'1920'),(1921,'1921'),(1922,'1922'),(1923,'1923'),(1924,'1924'),(1925,'1925'),(1926,'1926'),(1927,'1927'),(1928,'1928'),(1929,'1929'),(1930,'1930'),(1931,'1931'),(1932,'1932'),(1933,'1933'),(1934,'1934'),(1935,'1935'),(1936,'1936'),(1937,'1937'),(1938,'1938'),(1939,'1939'),(1940,'1940'),(1941,'1941'),(1942,'1942'),(1943,'1943'),(1944,'1944'),(1945,'1945'),(1946,'1946'),(1947,'1947'),(1948,'1948'),(1949,'1949'),(1950,'1950'),(1951,'1951'),(1952,'1952'),(1953,'1953'),(1954,'1954'),(1955,'1955'),(1956,'1956'),(1957,'1957'),(1958,'1958'),(1959,'1959'),(1960,'1960'),(1961,'1961'),(1962,'1962'),(1963,'1963'),(1964,'1964'),(1965,'1965'),(1966,'1966'),(1967,'1967'),(1968,'1968'),(1969,'1969'),(1970,'1970'),(1971,'1971'),(1972,'1972'),(1973,'1973'),(1974,'1974'),(1975,'1975'),(1976,'1976'),(1977,'1977'),(1978,'1978'),(1979,'1979'),(1980,'1980'),(1981,'1981'),(1982,'1982'),(1983,'1983'),(1984,'1984'),(1985,'1985'),(1986,'1986'),(1987,'1987'),(1988,'1988'),(1989,'1989'),(1990,'1990'),(1991,'1991'),(1992,'1992'),(1993,'1993'),(1994,'1994'),(1995,'1995'),(1996,'1996'),(1997,'1997'),(1998,'1998'),(1999,'1999'),(2000,'2000'),(2001,'2001'),(2002,'2002'),(2003,'2003'),(2004,'2004'),(2005,'2005'),(2006,'2006'),(2007,'2007'),(2008,'2008'),(2009,'2009'),(2010,'2010'),(2011,'2011'),(2012,'2012');
+/*!40101 SET sql_safe_updates=0 */;
+call fill_tbl_year();
+/*!40101 SET sql_safe_updates=1 */;
 /*!40000 ALTER TABLE `tbl_year` ENABLE KEYS */;
 UNLOCK TABLES;
 
