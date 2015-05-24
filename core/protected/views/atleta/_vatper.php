@@ -35,7 +35,7 @@
 		  array(               
 				'label'=>$model->getAttributeLabel('foto_atleta'),
                 'type' => 'image',
-                'value'=> Yii::app()->request->baseUrl.'/images/mostrarFoto.php?id='.$model->cedula_atleta,
+                'value'=> $src_foto,
 								
 				
 		 ),
@@ -76,7 +76,7 @@
 		  array(               
 				'label'=>$model->getAttributeLabel('fotocopia_cedula_atleta'),
                 'type' => 'image',
-                'value'=> Yii::app()->request->baseUrl.'/images/mostrarCopia.php?id='.$model->cedula_atleta,
+                'value'=> $src_fotocopia,
 				
 		 ),
 		 

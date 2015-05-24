@@ -234,7 +234,7 @@ $(document).ready(function(){
 					?>					
 				</li>
 			</ul>
-			<?php echo $form->fileField($model1,'foto_direccion',array('size'=>3,'maxlength'=>45, 'onChange'=>'subirFoto()' )); ?>
+			<?php echo $form->fileField($model1,'foto_direccion',array('size'=>3,'maxlength'=>45)); ?>
 		</div>
 		<?php echo $form->error($model1,'foto_direccion'); ?>		
 	</div>

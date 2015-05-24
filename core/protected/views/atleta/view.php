@@ -3,68 +3,66 @@
 
 
 <style>
-	
-	#lang-guess-wrap{
-		padding: 0;
-		height: 18px;
-		min-height: 18px;
-		display: block;
-		font-family: arial,sans-serif;	
-		margin-top: -45px;		 
-	}
 
-	#lang-guess {
-		padding: 5px;
-		 width: 400px ;
-  margin-left: auto ;
-  margin-right: auto ;		
-		font-family: arial,sans-serif;		
-		display: block;
-		text-align: center;
-		font-weight: bold;
-		color: #222;
-		background: #F9EDBE;		
-		-moz-border-radius: 2px;
-		-webkit-border-radius: 2px;
-		border-radius: 2px;
-		border: 1px solid transparent;		
-		background-color: #F9EDBE;
-			border-color: #F0C36D;
-	}
-	.divisiones{
-		background-color: #F2F2F2;
-		border-bottom: none;
-		border-top: solid 1px #E2E2E2;
-		padding: 4px 5px 5px;
-		font-size: 12px;
-		color: #333;
-		font-weight: bold; 
-		margin: 20px 0px -25px 0px;
-	}
+    #lang-guess-wrap{
+        padding: 0;
+        height: 18px;
+        min-height: 18px;
+        display: block;
+        font-family: arial,sans-serif;	
+        margin-top: -45px;		 
+    }
+
+    #lang-guess {
+        padding: 5px;
+        width: 400px ;
+        margin-left: auto ;
+        margin-right: auto ;		
+        font-family: arial,sans-serif;		
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        color: #222;
+        background: #F9EDBE;		
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        border: 1px solid transparent;		
+        background-color: #F9EDBE;
+        border-color: #F0C36D;
+    }
+    .divisiones{
+        background-color: #F2F2F2;
+        border-bottom: none;
+        border-top: solid 1px #E2E2E2;
+        padding: 4px 5px 5px;
+        font-size: 12px;
+        color: #333;
+        font-weight: bold; 
+        margin: 20px 0px -25px 0px;
+    }
 </style>
 
 <?php
-$this->breadcrumbs=array(
-	'Lista de atletas'=>array('index'),
-	Yii::app()->numberFormatter->format("#,###", $model->cedula_atleta),
+$this->breadcrumbs = array(
+    'Lista de atletas' => array('index'),
+    Yii::app()->numberFormatter->format("#,###", $model->cedula_atleta),
 );
-$men='El atleta <u>'.$model->primer_nombre_atleta.' '.$model->primer_apellido_atleta.'</u>ha sido actualizado satisfactoriamente.';
-$this->menu=array(
-	
-	array('label'=>'Registrar atleta', 'url'=>array('create')),
-	array('label'=>'Actualizar atleta', 'url'=>array('update', 'id'=>$model->cedula_atleta)),
-	array('label'=>'Imprimir registro', 'url'=>array('generarPdfAtleta','id'=>$model->cedula_atleta)),
-	array('label'=>'Listar atletas', 'url'=>array('index')),
-	array('label'=>'Búsqueda Avanzada', 'url'=>array('admin')),
+$men = 'El atleta <u>' . $model->primer_nombre_atleta . ' ' . $model->primer_apellido_atleta . '</u>ha sido actualizado satisfactoriamente.';
+$this->menu = array(
+    array('label' => 'Registrar atleta', 'url' => array('create')),
+    array('label' => 'Actualizar atleta', 'url' => array('update', 'id' => $model->cedula_atleta)),
+    array('label' => 'Imprimir registro', 'url' => array('generarPdfAtleta', 'id' => $model->cedula_atleta)),
+    array('label' => 'Listar atletas', 'url' => array('index')),
+    array('label' => 'Búsqueda Avanzada', 'url' => array('admin')),
 );
 ?>
 
 
 
 <?php
-if (isset($_GET['creado']))  
-{
-echo '<style>
+if (isset($_GET['creado'])) {
+    echo '<style>
 		#lang-guess {
 		display:block;	
 	}
@@ -75,115 +73,152 @@ echo '<style>
 		
 	});
 </script>';
-}
-else if (isset($_GET['actualizado']))  
-{
+} else if (isset($_GET['actualizado'])) {
 
-echo '<style>
+    echo '<style>
 		#lang-guess {
 		display:block;	
 	}
 </style>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("#lang-guess").html("El atleta <u>'.$model->primer_nombre_atleta.' '.$model->primer_apellido_atleta.'</u> ha sido actualizado satisfactoriamente.");
+		$("#lang-guess").html("El atleta <u>' . $model->primer_nombre_atleta . ' ' . $model->primer_apellido_atleta . '</u> ha sido actualizado satisfactoriamente.");
 		$("#lang-guess").fadeOut(10000);
 		
 		
 	});
 </script>';
-}
-else{
-echo '<style>
+} else {
+    echo '<style>
 		#lang-guess {
 		display:none;	
 	}
 </style>';
-} ?>
+}
+?>
 
-<?php echo 	'<div id="lang-guess-wrap">
+<?php echo '<div id="lang-guess-wrap">
 		<div id="lang-guess">
-			El atleta <u>'.$model->primer_nombre_atleta.' '.$model->primer_apellido_atleta.'</u> ha sido registrado satisfactoriamente.
+			El atleta <u>' . $model->primer_nombre_atleta . ' ' . $model->primer_apellido_atleta . '</u> ha sido registrado satisfactoriamente.
 		</div>
 	</div>';
 ?>
 
-<h1><?php echo $model->primer_nombre_atleta.' '.$model->primer_apellido_atleta.' ('.$model->atletaDeportivo->es_atleta_activo.')'; ?> </h1>
-<p><?php 
+<h1><?php echo $model->primer_nombre_atleta . ' ' . $model->primer_apellido_atleta . ' (' . $model->atletaDeportivo->es_atleta_activo . ')'; ?> </h1>
+<p><?php
 $fecha_ac = Yii::app()->dateFormatter->format("dd-MM-yyyy", $model->fecha_ultima_actualizacion_registro);
 $hora_ac = Yii::app()->dateFormatter->format("hh:mm a", $model->fecha_ultima_actualizacion_registro);
-echo '<B>ÚLTIMA ACTUALIZACIÓN DEL REGISTRO: </b>'.$fecha_ac.'  <b>HORA: </b>'.$hora_ac.'<br>';
+echo '<B>ÚLTIMA ACTUALIZACIÓN DEL REGISTRO: </b>' . $fecha_ac . '  <b>HORA: </b>' . $hora_ac . '<br>';
 ?></p>
 
 <div class="divisiones">DATOS PERSONALES</div>
-<?php echo $this->renderPartial('_vatper', array(
-			'model'=>$model,		
-)); ?>
+    <?php
+// borrar las fotos que esten en el directorio
+    foreach (glob("./images/_foto*.jpg") as $filename) {
+        unlink($filename);
+    }
+
+// leo la foto de la bd y la escribo en el directorio					
+
+    $rd = rand(1, 10000);
+    $destino_foto = './images/_foto' . $rd . '.jpg';
+    $image = imagecreatefromstring($model8->foto_atleta);
+    imagejpeg($image, $destino_foto, 100);
+
+// borrar las cedulas que esten en el directorio
+    foreach (glob("./images/_cedula*.jpg") as $filename) {
+        unlink($filename);
+    }
+
+    // leo la cedula de la bd y la escribo en el directorio					
+
+    $rd = rand(1, 10000);
+    $destino_fotocopia = './images/_cedula' . $rd . '.jpg';
+    $image = imagecreatefromstring($model9->fotocopia_atleta);
+    imagejpeg($image, $destino_fotocopia, 100);
+
+
+    echo $this->renderPartial('_vatper', array(
+        'model' => $model,
+        'src_foto' => $destino_foto,
+        'src_fotocopia' => $destino_fotocopia,
+    ));
+    ?>
 
 
 <div class="divisiones">DATOS ACADÉMICOS</div>	
-<?php echo $this->renderPartial('_vataca', array(
-			'model'=>$model->atletaAcademico,		
-)); ?>
+<?php
+echo $this->renderPartial('_vataca', array(
+    'model' => $model->atletaAcademico,
+));
+?>
 
 
 <div class="divisiones">DATOS DEPORTIVOS</div>
-<?php echo $this->renderPartial('_vatdep', array(
-			'model'=>$model->atletaDeportivo,		
-)); ?>
+<?php
+echo $this->renderPartial('_vatdep', array(
+    'model' => $model->atletaDeportivo,
+));
+?>
 
 <div class="divisiones">PARTICIPACIÓN EN EXHIBICIONES O CLINICAS DEPORTIVAS</div>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider'=>$dataExhibicion,
-	'summaryText' => '',
-    'columns'=>array
-    (       
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $dataExhibicion,
+    'summaryText' => '',
+    'columns' => array
+        (
         'nombre_exhibicion',
-		'nombre_sede_exhibicion',
-		'year_exhibicion',
-		'facilitador_exhibicion',
+        'nombre_sede_exhibicion',
+        'year_exhibicion',
+        'facilitador_exhibicion',
     ),
-)); ?>	
+));
+?>	
 
 <div class="divisiones">RECONOCIMIENTOS RECIBIDOS</div>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider'=>$dataReconocimiento,
-	'summaryText' => '',
-    'columns'=>array
-    (       
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $dataReconocimiento,
+    'summaryText' => '',
+    'columns' => array
+        (
         'nombre_reconocimiento',
-		'institucion_reconocimiento',
-		'year_reconocimiento',
-		'evento_reconocimiento',
+        'institucion_reconocimiento',
+        'year_reconocimiento',
+        'evento_reconocimiento',
     ),
-)); ?>	
-	
+));
+?>	
+
 
 <div class="divisiones">SANCIONES RECIBIDAS</div>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider'=>$dataSancion,
-	'summaryText' => '',
-    'columns'=>array
-    (       
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $dataSancion,
+    'summaryText' => '',
+    'columns' => array
+        (
         'motivo_sancion',
-		'organismo_sancion',
-		'year_inicio_sancion',
-		'year_fin_sancion',
+        'organismo_sancion',
+        'year_inicio_sancion',
+        'year_fin_sancion',
     ),
-)); ?>	
-	
+));
+?>	
+
 
 <div class="divisiones">PARTICIPACIÓN EN COMPETENCIAS</div>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-    'dataProvider'=>$dataCompetencia,
-	'summaryText' => '',
-    'columns'=>array
-    (       
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider' => $dataCompetencia,
+    'summaryText' => '',
+    'columns' => array
+        (
         'nivel_competencia',
-		'nombre_competencia',
-	
-		'year_competencia',
-		
-		'lugar_competencia',
+        'nombre_competencia',
+        'year_competencia',
+        'lugar_competencia',
     ),
-)); ?>	
+));
+?>	
