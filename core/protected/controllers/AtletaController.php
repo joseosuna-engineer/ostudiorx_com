@@ -236,6 +236,8 @@ class AtletaController extends Controller
 		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id,'AtletaPersonal'),
+                        'model8'=>$this->loadModel($id,'Foto'),
+                        'model9'=>$this->loadModel($id,'Fotocopia'),
 			'dataExhibicion'=>$dataExhibicion,
 			'dataReconocimiento'=>$dataReconocimiento,
 			'dataSancion'=>$dataSancion,
@@ -247,7 +249,7 @@ class AtletaController extends Controller
 
 
 	/**
-	 * Al Crear un atleta todos los modelos de datos asociados a él se crean (inicializan)
+	 * Al Crear un atleta todos los modelos de datos asociados a ï¿½l se crean (inicializan)
 	 */
 	public function actionCreate()
 	{
@@ -269,10 +271,10 @@ class AtletaController extends Controller
 		$model8=new Foto;
 		$model9=new Fotocopia;
 		
-		// El nuevo atleta sólo cuenta con 7 datos criticos
-		// c.i., 1º nombre, 1º apellido, sector al que pertenece el atleta,
-		// escuela (no obligatorio), año ingreso a la educación superior, disciplina, el resto es vacio
-		// para crear cada tabla relacionada sólo hace falta el c.i.
+		// El nuevo atleta sï¿½lo cuenta con 7 datos criticos
+		// c.i., 1ï¿½ nombre, 1ï¿½ apellido, sector al que pertenece el atleta,
+		// escuela (no obligatorio), aï¿½o ingreso a la educaciï¿½n superior, disciplina, el resto es vacio
+		// para crear cada tabla relacionada sï¿½lo hace falta el c.i.
 
 		if(isset($_POST['AtletaPersonal'],$_POST['AtletaAcademico'],$_POST['AtletaDeportivo'])) // los modelos son sets?
 		{
@@ -534,7 +536,7 @@ class AtletaController extends Controller
 	{
 		$model=$md::model()->findByPk((int)$id);
 		if($model===null)
-			throw new CHttpException(404,'El Atleta requerido no está registrado.');
+			throw new CHttpException(404,'El Atleta requerido no estï¿½ registrado.');
 		return $model;
 	}
 	
@@ -542,7 +544,7 @@ class AtletaController extends Controller
 	{
 		$model=$md::model()->findAll(array('order'=>$or, 'condition'=>'cedula_atleta=:x', 'params'=>array(':x'=>$id)));
 		if($model===null)
-			throw new CHttpException(404,'El Atleta requerido no está registrado.');
+			throw new CHttpException(404,'El Atleta requerido no estï¿½ registrado.');
 		return $model;
 	}
 	
