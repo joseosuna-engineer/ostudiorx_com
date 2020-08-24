@@ -1,3 +1,0 @@
-CREATE DATABASE bd_registro;
-use mysql;
-GRANT SELECT, INSERT, UPDATE ON bd_registro.* TO 'deportes'@'localhost' IDENTIFIED BY 'deportes';
