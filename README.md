@@ -8,11 +8,12 @@ A web-enabled athlete profiles software
 ## Prerequisite
 
 ### Install Php and Nginx
-Install php7.4-fpm
 
-match nginx user to php user
+Install php7.4-fpm <br />
 
-use nginx with php7.4-fpm.sock
+match nginx user to php user <br />
+
+use nginx with php7.4-fpm.sock <br />
 
 
 ### Install mysql and php support
@@ -20,24 +21,24 @@ use nginx with php7.4-fpm.sock
 
 ### Enviroment variables
 
-OPENSHIFT_MYSQL_DB_HOST=
-OPENSHIFT_MYSQL_DB_PORT=
-OPENSHIFT_MYSQL_DB_USERNAME=
-OPENSHIFT_MYSQL_DB_PASSWORD=
-OPENSHIFT_GEAR_NAME=bd_registro
-GII_MODULE_PASS=
-GII_MODULE_IP=
-ADMIN_EMAIL=
+OPENSHIFT_MYSQL_DB_HOST=<br />
+OPENSHIFT_MYSQL_DB_PORT=<br />
+OPENSHIFT_MYSQL_DB_USERNAME=<br />
+OPENSHIFT_MYSQL_DB_PASSWORD=<br />
+OPENSHIFT_GEAR_NAME=bd_registro<br />
+GII_MODULE_PASS=<br />
+GII_MODULE_IP=<br />
+ADMIN_EMAIL=<br />
 
 
 ### data
-#create database and user from
-/protected/data/init.sql
+# create database and user from<br />
+/protected/data/init.sql<br />
 
-#Copy data
-/protected/data/dump-data.sql
+# Copy data
+/protected/data/dump-data.sql <br />
 
 
 # login
-user: usuario
-pass: usuario
+user: usuario <br />
+pass: usuario <br />
