@@ -58,7 +58,7 @@ body{
 #titulo{
 	font-family: 'Arial';
     font-size: 11pt;
-    font-weight: bold;	
+    font-weight: bold;
 	margin-top: 22pt;
 }
 
@@ -77,18 +77,18 @@ table{
 <body>
 
 	<div id='contenido'>
-	
-		
-		
-		
+
+
+
+
 		<div id='cuerpo'>
-		
+
 			<p><b>FECHA DE IMPRESIÓN:</b> ".$hoy." <b>HORA:</b> ".$hora."</p>
-		
+
 			<table>
-			
+
 				<tbody>
-				
+
 					<tr>
 						<td class='principal' width='14%'>Estatus deportivo</td>
 						<td class='principal' width='16%'>Año de ingreso a la educación superior</td>
@@ -98,10 +98,10 @@ table{
 						<td class='principal' width='14%'>Nombre</td>
 						<td class='principal' width='14%'>Apellido</td>
 					</tr>";
-					
+
 					 $i=0;
-       
-         
+
+
 				 while($i<$contador){
 					$html.="
 					<tr class='odd'>
@@ -109,21 +109,21 @@ table{
 						<td class='odd' width='16%'>".$dataProvider[$i]['atletaAcademico']['year_ingreso_educacion_superior_atleta']."</td>
 						<td class='odd' width='14%'>".$dataProvider[$i]['atletaDeportivo']['disciplina_atleta']."</td>
 						<td class='odd' width='14%'>".$dataProvider[$i]['escuela_atleta']."</td>
-						<td class='odd' width='14%'>".Yii::app()->numberFormatter->format( '#,###', $dataProvider[$i]['cedula_atleta'])."</td>						
+						<td class='odd' width='14%'>".Yii::app()->numberFormatter->format( '#,###', $dataProvider[$i]['cedula_atleta'])."</td>
 						<td class='odd' width='14%'>".$dataProvider[$i]['primer_nombre_atleta']."</td>
 						<td class='odd' width='14%'>".$dataProvider[$i]['primer_apellido_atleta']."</td>
 					";
 					$html.="</tr>"; $i++;
 				 }
-				 
+
 			$html.="</tbody>
-				
+
 			</table>
-			
-			
+
+
 
 		</div>
-		
+
 	</div>
 
 </body>
@@ -132,46 +132,46 @@ table{
 
 ";
 $header="<div id='encabezado'>
-		
+
 			<div id='logo'>
-			
-				<img src='http://rstatic.ostudiorx.com/logo.png'   />
-			
+
+				<img src='/images/logo.png'   />
+
 			</div>
-			
+
 			<div>
-			
+
 				<div id='membrete'>
-				
+
 					<p class='membrete'>NOMBRE INSTITUCIÓN</p>
 					<p class='membrete'>NOMBRE UNIDAD</p>
 					<p class='membrete'>CIUDAD</p>
-					
+
 					<p id='titulo'>REPORTE ATLETAS</p>
-				
+
 				</div>
-				
+
 				<div id='foto'>
-				
-					<img src='http://rstatic.ostudiorx.com/full-logo.png'   />
-				
+
+					<img src='/images/full-logo.png'   />
+
 				</div>
-			
-			
+
+
 			</div>
-			
-			
-		
-		</div>	
+
+
+
+		</div>
 ";
 $footer="<div id='pie'>
-		
+
 					<p class='pie'>Derechos de Autor © ".$year."  Producciones OSTUDIO rx C.A.</p>
 					<p class='pie'>Todos los derechos reservados.</p>
-					
+
 
 		</div> <div style='text-align:right;'>{PAGENO}/{nb}</div>";
-		
+
 $mpdf=new mPDF(
 				'utf-8', // mode
 				'Letter',// format

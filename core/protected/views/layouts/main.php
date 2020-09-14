@@ -3,13 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="es" />
-        
+
         <!-- for apple gadgets viewport and mobile -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />         
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
         <!-- icons -->
-        <link rel="shortcut icon" href="http://rstatic.ostudiorx.com/logo.gif" type="image/x-icon" />
-        <link rel="icon" href="http://rstatic.ostudiorx.com/logo.gif" type="image/x-icon" />
+        <link rel="shortcut icon" href="/images/logo.gif" type="image/x-icon" />
+        <link rel="icon" href="/images/logo.gif" type="image/x-icon" />
 
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
@@ -20,10 +20,10 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-	
-	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-1.6.1.js"></script> 
-	
-	 
+
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-1.6.1.js"></script>
+
+
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -39,10 +39,10 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-								
+
 				array('label'=>'Atletas', 'url'=>array('/atleta/index'), 'visible'=>!Yii::app()->user->isAdmin()),
 				array('label'=>'Usuario', 'url'=>array('/usuario/index'), 'visible'=>Yii::app()->user->isAdmin()),
-				
+
 				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
@@ -52,16 +52,16 @@
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-	
+
 	<script type="text/javascript">
 
-function liftOff() { 
-    $('#error-conect').countdown('destroy'); 
-	$('#error-conect').text('0'); 
-} 
+function liftOff() {
+    $('#error-conect').countdown('destroy');
+	$('#error-conect').text('0');
+}
 
 
-	
+
 </script>
 
 	<?php echo $content; ?>
