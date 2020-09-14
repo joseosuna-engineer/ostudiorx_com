@@ -37,8 +37,13 @@ ADMIN_EMAIL=<br />
 
 # Copy data
 /protected/data/dump-data.sql <br />
+/protected/data/dump-data-lost-tables.sql <br />
 
 
 # login
 user: usuario <br />
 pass: usuario <br />
+
+# Database Model
+You can find a database in /protected/data/MODELO_ER_BD_MySQL_Workbench_8.mwb <br />
+It works on MySQL Workbench 8
