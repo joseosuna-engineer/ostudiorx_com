@@ -1,3 +1,24 @@
+<img src="https://raw.githubusercontent.com/joseosuna-engineer/ostudiorx_com/master/core/images/full-logo.png"   />
+
+# This really means a lot to me
+> It was my **first end-to-end big project**. I think it was important for my Programming portfolio. In fact. I used this project as a cover letter for my first paid job. I am surprised this code has survived to Pendrives, DVDs, private repositories, Bitbucket, and back to GitHub.
+
+## A little bit of history
+
+
+
+<img src="https://github.com/matiassingers/awesome-readme/raw/master/icon.png" align="left"  />
+
+
+> According to this commit [zzzz](https://github.com/joseosuna-engineer/ostudiorx_com/commit/zzzzzz) committed on **Dec 27, 2012**, It was running on PHP **YiiFramework 1.1.7**. <br />
+> YiiFramework 1.1.7 [CHANGELOG](https://www.yiiframework.com/files/CHANGELOG-1.1.7.txt) dated Version 1.1.7 on **March 27, 2011**. <br />
+> YiiFramework 1.1.8 [CHANGELOG](https://www.yiiframework.com/files/CHANGELOG-1.1.8.txt) dated Version 1.1.8 on **June 26, 2011**. <br />
+> I remember that I used the last YiiFramework version, so this puts the kickoff between March 27, 2011 and June 26, 2011. 
+
+
+<img src="https://www.yiiframework.com/image/yii_logo_light.png" align="center"   />
+
+
 chacao
 ================
 
