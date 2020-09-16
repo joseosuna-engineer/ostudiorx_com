@@ -53,18 +53,18 @@ ADMIN_EMAIL=<br />
 
 
 ### data
-# create database and user from<br />
-/protected/data/init.sql<br />
+#### create database and user from<br />
+models-and-database/init.sql<br />
 
-# Copy data
-/protected/data/dump-data.sql <br />
-/protected/data/dump-data-lost-tables.sql <br />
+#### Copy data
+models-and-database/dump-data.sql <br />
+models-and-database/dump-data-lost-tables.sql <br />
 
 
-# login
+### login
 user: usuario <br />
 pass: usuario <br />
 
-# Database Model
-You can find a database in /protected/data/MODELO_ER_BD_MySQL_Workbench_8.mwb <br />
+### Database Model
+You can find a database in models-and-database/MODELO_ER_BD_MySQL_Workbench_8.mwb <br />
 It works on MySQL Workbench 8
