@@ -1,6 +1,5 @@
 /core/assets/*
-protected/runtime/*
-!protected/runtime/.gitignore
+/core/protected/runtime/*
 /core/protected/data/*.db
-themes/classic/views/
+/core/themes/classic/views/
 /core/nbproject
