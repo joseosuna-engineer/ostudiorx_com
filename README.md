@@ -10,7 +10,7 @@
 <img src="https://github.com/matiassingers/awesome-readme/raw/master/icon.png" align="left"  />
 
 
-> According to this commit [zzzz](https://github.com/joseosuna-engineer/ostudiorx_com/commit/zzzzzz) committed on **Dec 27, 2012**, It was running on PHP **YiiFramework 1.1.7**. <br />
+> According to this commit [58ed570](https://github.com/joseosuna-engineer/ostudiorx_com/commit/58ed57073d2e6b2c83dd50d61a53461bce47edfa) committed on **Dec 27, 2012**, It was running on PHP **YiiFramework 1.1.7**. <br />
 > YiiFramework 1.1.7 [CHANGELOG](https://www.yiiframework.com/files/CHANGELOG-1.1.7.txt) dated Version 1.1.7 on **March 27, 2011**. <br />
 > YiiFramework 1.1.8 [CHANGELOG](https://www.yiiframework.com/files/CHANGELOG-1.1.8.txt) dated Version 1.1.8 on **June 26, 2011**. <br />
 > I remember that I used the last YiiFramework version, so this puts the kickoff between March 27, 2011 and June 26, 2011. 
