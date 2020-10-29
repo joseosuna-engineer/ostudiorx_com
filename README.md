@@ -42,6 +42,11 @@ use nginx with php7.4-fpm.sock <br />
 
 ### Enviroment variables
 
+> ubuntu:
+```bash
+sudo nano /etc/environment
+```
+
 OPENSHIFT_MYSQL_DB_HOST=<br />
 OPENSHIFT_MYSQL_DB_PORT=<br />
 OPENSHIFT_MYSQL_DB_USERNAME=<br />
