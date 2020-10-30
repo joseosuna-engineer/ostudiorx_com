@@ -33,28 +33,62 @@ A web-enabled athlete profiles software
 Install php7.4-fpm <br />
 
 match nginx user to php user <br />
+```bash
+sudo nano /etc/php/7.4/fpm/pool.d/www.conf
+user = your-user
+group = your-user
+
+listen.owner = your-user
+listen.group = your-user
+
+```
+
+```bash
+sudo nano /etc/nginx/nginx.conf
+user your-user;
+
+```
 
 use nginx with php7.4-fpm.sock <br />
+```bash
+ location ~ \.php$ {
+                ...
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+                ...
+                }
 
+```
+
+#### enable GD-support 
+```bash
+sudo apt install php7.4-gd
+```
 
 ### Install mysql and php support
 
 
 ### Enviroment variables
 
-> ubuntu:
+> nginx:
 ```bash
-sudo nano /etc/environment
-```
 
-OPENSHIFT_MYSQL_DB_HOST=<br />
-OPENSHIFT_MYSQL_DB_PORT=<br />
-OPENSHIFT_MYSQL_DB_USERNAME=<br />
-OPENSHIFT_MYSQL_DB_PASSWORD=<br />
-OPENSHIFT_GEAR_NAME=bd_registro<br />
-GII_MODULE_PASS=<br />
-GII_MODULE_IP=<br />
-ADMIN_EMAIL=<br />
+sudo nano nginx/sites-available/your-site
+# don't put character $ as value
+
+location ~ \.php$ {
+        ...
+        fastcgi_param OPENSHIFT_MYSQL_DB_PORT "...";
+        fastcgi_param OPENSHIFT_MYSQL_DB_USERNAME "...";
+        fastcgi_param OPENSHIFT_MYSQL_DB_PASSWORD "...";
+        fastcgi_param OPENSHIFT_GEAR_NAME "...";
+        fastcgi_param GII_MODULE_PASS "...";
+        fastcgi_param GII_MODULE_IP "...";
+        fastcgi_param ADMIN_EMAIL "...";
+        include fastcgi_params;
+        ...
+    }
+```
 
 
 ### data
