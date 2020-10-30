@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
         <!-- icons -->
-        <link rel="shortcut icon" href="/images/logo.gif" type="image/x-icon" />
-        <link rel="icon" href="/images/logo.gif" type="image/x-icon" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
