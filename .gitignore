@@ -3,3 +3,5 @@
 /core/protected/data/*.db
 /core/themes/classic/views/
 /core/nbproject
+/core/images/*
+
