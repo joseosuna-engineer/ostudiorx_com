@@ -60,9 +60,15 @@ use nginx with php7.4-fpm.sock <br />
 
 ```
 
-#### enable GD-support 
+#### enable GD-support (images)
 ```bash
 sudo apt install php7.4-gd
+```
+
+#### enable mbstring extension (pdf)
+> it's works with mPDF 6.0
+```bash
+sudo apt-get install php7.4-mbstring
 ```
 
 ### Install mysql and php support
