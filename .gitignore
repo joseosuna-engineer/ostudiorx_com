@@ -4,4 +4,4 @@
 /core/themes/classic/views/
 /core/nbproject
 /core/images/*
-
+/core/protected/extensions/mpdf60/*
