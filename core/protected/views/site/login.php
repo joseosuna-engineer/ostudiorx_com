@@ -38,7 +38,7 @@ $this->pageTitle=Yii::app()->name . ' - Acceso';
 ?>
 <div id="cabecera">
     <div style="text-align: right;">
-        <img src="/images/logo.gif" alt="Logo" style="width: 15px; margin:0 auto;">
+        <img src="/images/logo.png" alt="Logo" style="width: 15px; margin:0 auto;">
         <span style="font-size: 12px;">CHACAO</span>
     </div>
     <h1>Acceso</h1>
